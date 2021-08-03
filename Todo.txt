@@ -1,0 +1,38 @@
+CODE
+Texture AudioPlayer2D
+Inch state
+Beam ysort thing
+Shadow/Height script
+Universal audio vector tree
+High and low collision shapes
+Enemy routing
+Compose states/status etc.
+
+
+
+PLAY
+Metal Gear 1 & 2
+Metal Gear Solid
+Top-Down LOZ
+Megaman
+Sanitarium
+IHNMAIMS
+Myst
+Abuse
+(Creat graphs)
+
+WATCH:
+VHS tapes
+The Godfather
+Breaking Bad
+Expedition Zero
+
+REVIEW
+Metroidvania maps
+Zelda Retrospective
+Red/blue ability freedom circle graph
+code grouping / abstractions
+Zdzislaw Beksinski
+
+OTHER / CREW:
+Carbon Battle royale

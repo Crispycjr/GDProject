@@ -1,0 +1,30 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://testing/ground2/Animations/Crawl_S.tres" type="Animation" id=1]
+[ext_resource path="res://testing/ground2/Animations/Run_N.tres" type="Animation" id=2]
+[ext_resource path="res://testing/ground2/Animations/Idle_E.tres" type="Animation" id=3]
+[ext_resource path="res://testing/ground2/Animations/Run_S.tres" type="Animation" id=4]
+[ext_resource path="res://testing/ground2/Animations/Run_W.tres" type="Animation" id=5]
+[ext_resource path="res://testing/ground2/Animations/Run_E.tres" type="Animation" id=6]
+[ext_resource path="res://testing/ground2/Animations/Idle_W.tres" type="Animation" id=7]
+[ext_resource path="res://testing/ground2/Animations/Crawl_N.tres" type="Animation" id=8]
+[ext_resource path="res://testing/ground2/Animations/Inch_W.tres" type="Animation" id=9]
+[ext_resource path="res://testing/ground2/Animations/Crawl_W.tres" type="Animation" id=10]
+[ext_resource path="res://testing/ground2/Animations/Idle_N.tres" type="Animation" id=11]
+[ext_resource path="res://testing/ground2/Animations/Idle_S.tres" type="Animation" id=12]
+[ext_resource path="res://testing/ground2/Animations/Inch_N.tres" type="Animation" id=13]
+
+[node name="AnimationPlayer" type="AnimationPlayer"]
+anims/Crawl_N = ExtResource( 8 )
+anims/Crawl_S = ExtResource( 1 )
+anims/Crawl_W = ExtResource( 10 )
+anims/Idle_E = ExtResource( 3 )
+anims/Idle_N = ExtResource( 11 )
+anims/Idle_S = ExtResource( 12 )
+anims/Idle_W = ExtResource( 7 )
+anims/Inch_N = ExtResource( 13 )
+anims/Inch_W = ExtResource( 9 )
+anims/Run_E = ExtResource( 6 )
+anims/Run_N = ExtResource( 2 )
+anims/Run_S = ExtResource( 4 )
+anims/Run_W = ExtResource( 5 )

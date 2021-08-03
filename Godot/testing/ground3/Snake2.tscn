@@ -1,0 +1,118 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://testing/ground3/SnakeCopy.gd" type="Script" id=1]
+[ext_resource path="res://testing/ground2/snake sheet.png" type="Texture" id=2]
+[ext_resource path="res://testing/ground3/steps_platform.ogg" type="AudioStream" id=3]
+[ext_resource path="res://testing/ground2/Sight.tscn" type="PackedScene" id=4]
+[ext_resource path="res://testing/ground2/AnimationPlayer.tscn" type="PackedScene" id=5]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 7.04849
+height = 0.0
+
+[sub_resource type="AnimationNodeAnimation" id=2]
+animation = "Idle S"
+
+[sub_resource type="AnimationNodeAnimation" id=3]
+animation = "Idle E"
+
+[sub_resource type="AnimationNodeAnimation" id=4]
+animation = "Idle N"
+
+[sub_resource type="AnimationNodeAnimation" id=5]
+animation = "Idle W"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=6]
+blend_point_0/node = SubResource( 2 )
+blend_point_0/pos = Vector2( 0, 1.1 )
+blend_point_1/node = SubResource( 3 )
+blend_point_1/pos = Vector2( 1, 0 )
+blend_point_2/node = SubResource( 4 )
+blend_point_2/pos = Vector2( 0, -1 )
+blend_point_3/node = SubResource( 5 )
+blend_point_3/pos = Vector2( -1, 0 )
+min_space = Vector2( -1, -1.01 )
+max_space = Vector2( 1, 1.1 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id=7]
+animation = "Run S"
+
+[sub_resource type="AnimationNodeAnimation" id=8]
+animation = "Run E"
+
+[sub_resource type="AnimationNodeAnimation" id=9]
+animation = "Run N"
+
+[sub_resource type="AnimationNodeAnimation" id=10]
+animation = "Run W"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=11]
+blend_point_0/node = SubResource( 7 )
+blend_point_0/pos = Vector2( 0, 1.1 )
+blend_point_1/node = SubResource( 8 )
+blend_point_1/pos = Vector2( 1, 0 )
+blend_point_2/node = SubResource( 9 )
+blend_point_2/pos = Vector2( 0, -1.1 )
+blend_point_3/node = SubResource( 10 )
+blend_point_3/pos = Vector2( -1, 0 )
+min_space = Vector2( -1, -1.1 )
+max_space = Vector2( 1, 1.1 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=12]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=13]
+
+[sub_resource type="AnimationNodeStateMachine" id=14]
+states/Idle/node = SubResource( 6 )
+states/Idle/position = Vector2( 365, 52 )
+states/Run/node = SubResource( 11 )
+states/Run/position = Vector2( 643, 52 )
+transitions = [ "Idle", "Run", SubResource( 12 ), "Run", "Idle", SubResource( 13 ) ]
+start_node = "Idle"
+graph_offset = Vector2( -90, -50 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=15]
+
+[sub_resource type="CircleShape2D" id=16]
+radius = 1.84713
+
+[node name="Player" type="KinematicBody2D" groups=[
+"kin",
+]]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.44545, -2.69078 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -0.44545, -10.6908 )
+texture = ExtResource( 2 )
+hframes = 16
+frame = 9
+
+[node name="Sight" parent="." instance=ExtResource( 4 )]
+z_index = 0
+collision_mask = 2147483652
+
+[node name="AnimationPlayer" parent="." instance=ExtResource( 5 )]
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 14 )
+anim_player = NodePath("../AnimationPlayer")
+parameters/playback = SubResource( 15 )
+parameters/Idle/blend_position = Vector2( 0, 0 )
+parameters/Run/blend_position = Vector2( 0, 0 )
+
+[node name="SoundSpace" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SoundSpace"]
+shape = SubResource( 16 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="SoundSpace"]
+stream = ExtResource( 3 )

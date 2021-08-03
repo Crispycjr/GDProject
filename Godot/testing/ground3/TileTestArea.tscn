@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://testing/ground3/Tileset.tres" type="TileSet" id=2]
+[ext_resource path="res://testing/ground2/Snake.tscn" type="PackedScene" id=3]
+[ext_resource path="res://testing/ground3/script.gd" type="Script" id=4]
+
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 65538, 0, 0, 65540, 1, 0, 65542, 2, 0, 131074, 0, 0, 131076, 1, 0, 131078, 2, 0, 196610, 0, 0, 196612, 1, 0, 196614, 2, 0 )
+script = ExtResource( 4 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]

@@ -1,0 +1,8 @@
+MODELS
+  lab rat
+  battle-enhancement drug
+  unknown side-effects
+  testing grounds / stage
+  super soldiers / bosses
+  genetic clones / organ farms
+  hallucinations / divine intervention

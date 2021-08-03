@@ -1,0 +1,108 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://testing/snake_inch_wip1/IdleUp.tres" type="Animation" id=1]
+[ext_resource path="res://testing/snake_inch_wip1/IdleLeft.tres" type="Animation" id=2]
+[ext_resource path="res://testing/snake_inch_wip1/RunUp.tres" type="Animation" id=3]
+[ext_resource path="res://testing/snake_inch_wip1/RunDown.tres" type="Animation" id=4]
+[ext_resource path="res://testing/snake_inch_wip1/Snake.gd" type="Script" id=5]
+[ext_resource path="res://testing/snake_inch_wip1/RunLeft.tres" type="Animation" id=6]
+[ext_resource path="res://testing/snake_inch_wip1/IdleRight.tres" type="Animation" id=7]
+[ext_resource path="res://testing/snake_inch_wip1/IdleDown.tres" type="Animation" id=8]
+[ext_resource path="res://testing/snake_inch_wip1/RunRight.tres" type="Animation" id=9]
+[ext_resource path="res://testing/snake_inch_wip1/the snake 1.png" type="Texture" id=10]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 7.04849
+height = 0.0
+
+[sub_resource type="AnimationNodeAnimation" id=2]
+animation = "IdleLeft"
+
+[sub_resource type="AnimationNodeAnimation" id=3]
+animation = "IdleUp"
+
+[sub_resource type="AnimationNodeAnimation" id=4]
+animation = "IdleRight"
+
+[sub_resource type="AnimationNodeAnimation" id=5]
+animation = "IdleDown"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=6]
+blend_point_0/node = SubResource( 2 )
+blend_point_0/pos = Vector2( -1, 0 )
+blend_point_1/node = SubResource( 3 )
+blend_point_1/pos = Vector2( 0, -1 )
+blend_point_2/node = SubResource( 4 )
+blend_point_2/pos = Vector2( 1, 0 )
+blend_point_3/node = SubResource( 5 )
+blend_point_3/pos = Vector2( 0, 1 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id=7]
+animation = "RunLeft"
+
+[sub_resource type="AnimationNodeAnimation" id=8]
+animation = "RunDown"
+
+[sub_resource type="AnimationNodeAnimation" id=9]
+animation = "RunRight"
+
+[sub_resource type="AnimationNodeAnimation" id=10]
+animation = "RunUp"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=11]
+blend_point_0/node = SubResource( 7 )
+blend_point_0/pos = Vector2( -1, 0 )
+blend_point_1/node = SubResource( 8 )
+blend_point_1/pos = Vector2( 0, 1 )
+blend_point_2/node = SubResource( 9 )
+blend_point_2/pos = Vector2( 1, 0 )
+blend_point_3/node = SubResource( 10 )
+blend_point_3/pos = Vector2( 0, -1 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=12]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=13]
+
+[sub_resource type="AnimationNodeStateMachine" id=14]
+states/Idle/node = SubResource( 6 )
+states/Idle/position = Vector2( 118.963, 74.9286 )
+states/Run/node = SubResource( 11 )
+states/Run/position = Vector2( 303.963, 74.9286 )
+transitions = [ "Idle", "Run", SubResource( 12 ), "Run", "Idle", SubResource( 13 ) ]
+start_node = "Idle"
+graph_offset = Vector2( -240.037, -20.0714 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=15]
+
+[node name="Player" type="KinematicBody2D"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D_Snake" type="CollisionShape2D" parent="."]
+position = Vector2( -0.44545, -2.69078 )
+shape = SubResource( 1 )
+
+[node name="Sprite_Snake" type="Sprite" parent="."]
+position = Vector2( -0.44545, -10.6908 )
+texture = ExtResource( 10 )
+hframes = 16
+frame = 3
+
+[node name="AnimationPlayer_Snake" type="AnimationPlayer" parent="."]
+anims/IdleDown = ExtResource( 8 )
+anims/IdleLeft = ExtResource( 2 )
+anims/IdleRight = ExtResource( 7 )
+anims/IdleUp = ExtResource( 1 )
+anims/RunDown = ExtResource( 4 )
+anims/RunLeft = ExtResource( 6 )
+anims/RunRight = ExtResource( 9 )
+anims/RunUp = ExtResource( 3 )
+
+[node name="AnimationTree_Snake" type="AnimationTree" parent="."]
+tree_root = SubResource( 14 )
+anim_player = NodePath("../AnimationPlayer_Snake")
+active = true
+parameters/playback = SubResource( 15 )
+parameters/Idle/blend_position = Vector2( 0, 0 )
+parameters/Run/blend_position = Vector2( 0, 0 )

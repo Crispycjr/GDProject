@@ -1,0 +1,30 @@
+GFX
+	Icicles shine
+	Puddles reflect / mirror
+	Shadow Ratios
+	Window Alphas
+	Shell Sparkle / Alpha
+	Shell bounce/revolve / tex
+	Glass shard sparkle
+	Sniper scope shine
+	Gunsmoke
+	Water level & hole
+	Bullet impact / tex
+	Glass ref / refrct / indoor fx
+	Walk/stop ground tex
+	char en / white Layer outline
+	Bleed out / timer / health
+	Accurate clocks
+	Time of day Shadows
+	Inventory animations
+	Snow pile-up / crawl when snowing
+
+SFX
+	Realistic birds
+	Shell bounce/revolve / tex
+	Walk/stop Ground tex
+	Droplets / Ground tex
+	Flourescent buzz
+	bullet Sboom / echo / area
+	Area / echo / Swave bounce
+	sticks / ground tex

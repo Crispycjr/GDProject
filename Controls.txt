@@ -1,0 +1,16 @@
+MODELS
+  LSHIFT == modifier - Speed maintenance / Slow down in specific context
+  ALT == modifier - Ray
+  SPACE - Slide ( End delay )
+  W A S D - Up , Down , Left , Right
+  RMB - Aim
+  C - Crouch / toggle
+  MWHEEL = Move along ray (scroll)
+
+  LSHIFT == modifier - Speed up / speed change in specific context
+  LCTRL == modifier - Speed maintenance / Degree maintenance in specific context
+
+  LSHIFT + SPACE = Jump
+  LCTRL + SPACE = Slide
+
+GAME FEEL

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Oxygen-Sys-Warning.ogg-359123cb8bddfe9f8f00cd5c23737f16.oggstr"
+
+[deps]
+
+source_file="res://testing/ground1/Oxygen-Sys-Warning.ogg"
+dest_files=[ "res://.import/Oxygen-Sys-Warning.ogg-359123cb8bddfe9f8f00cd5c23737f16.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
