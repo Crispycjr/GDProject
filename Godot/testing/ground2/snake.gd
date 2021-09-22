@@ -3,18 +3,22 @@ extends KinematicBody2D
 func _ready():
 	pass
 
+# variables to define on ready
 onready var status = $Status_Registry.dict_Status_Player
 onready var animation_State = $AnimationTree.get("parameters/playback")
 
+# constants to define 
 const ACCELERATION := 100.0
 const TOP_SPEED := 100.0
 const FRICTION := 100.0
 
+# enumeration of each distinct state
 enum {
 	STAND,
 	CROUCH
 }
 
+# variables to define as default
 var state := STAND
 var velocity = Vector2.ZERO
 var buffer_Vector = Vector2.ZERO
