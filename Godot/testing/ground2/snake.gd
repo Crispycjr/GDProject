@@ -7,7 +7,7 @@ func _ready():
 onready var status = $Status_Registry.dict_Status_Player
 onready var animation_State = $AnimationTree.get("parameters/playback")
 
-# constants to define 
+# constants to define as 100, to then be multiplied/divided accordingly
 const ACCELERATION := 100.0
 const TOP_SPEED := 100.0
 const FRICTION := 100.0
