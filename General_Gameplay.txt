@@ -1,6 +1,7 @@
 Corner cues && Red cue/Yellow cue // dynamic alpha/scaling with distance/intensity
 Megaman moves
 Hidden challenges // Star points // NUDOOM
+Unlockable cheat codes // GE007
 Weapon/Util Wheel
 Pixel density != Pixel res
 Dossier == Manual
@@ -19,6 +20,7 @@ Push/Movable objects
 Real military formations/protocals // change with difficulty
 bungie whiteboards
 Pancake stacking
+Isometric pancakes?
 punch/kick H T L area
 All enemy dead +effect+ and ))queue))
 != Loot effect

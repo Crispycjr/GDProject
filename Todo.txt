@@ -1,6 +1,5 @@
 CODE
 Texture AudioPlayer2D
-Inch state
 Beam ysort thing
 Shadow/Height script
 Universal audio vector tree
