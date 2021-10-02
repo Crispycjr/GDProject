@@ -10,6 +10,7 @@ Compose states/status etc.
 
 
 PLAY
+Sniper Elite
 Metal Gear 1 & 2
 Metal Gear Solid
 Top-Down LOZ

@@ -1,13 +1,13 @@
 GFX
 	Icicles shine
-	Puddles reflect / mirror
-	Shadow Ratios
+	Puddles/liquid reflect / mirror / sparkle
+	Shadow Ratios / warp
 	Window Alphas
 	Shell Sparkle / Alpha
 	Shell bounce/revolve / tex
 	Glass shard sparkle
-	Sniper scope shine
-	Gunsmoke
+    Scope glint
+    Barrel/Ejector smoke
 	Water level & hole
 	Bullet impact / tex
 	Glass ref / refrct / indoor fx
