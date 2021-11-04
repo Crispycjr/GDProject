@@ -14,7 +14,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="new project"
+config/name="SniperGame"
 run/main_scene="res://testing/ground3/World.tscn"
 config/icon="res://testing/ground1/icon.png"
 
