@@ -1,4 +1,51 @@
 #------------------------------------------------
+# Blueprints                                    |
+#------------------------------------------------
+== Texture sound feedback ==
+1. Have soundspace node within scenes in group "Kin" play proper soundbank by fetching name of individual tile textures (as a string) within "Tileset" node when within range
+    **Pseudo**
+    if (idv. tile name) starts with string "Concrete":
+       Soundspace play (ConcreteWalking/ConcreteRunning) #(Depending on action context)
+
+2. Have soundspace node within scenes in group "Kin" play proper soundbank by checking the type of tileset scene when within range 
+    **Pseudo**
+    if (idv. tile) is a part of ConcreteTileset.tscn:
+       Soundspace play (ConcreteWalking/ConcreteRunning) #(Depending on action context)
+
+#------------------------------------------------
+# TODO                                          |
+#------------------------------------------------
+CODE
+Texture AudioPlayer2D
+Beam ysort thing
+Collision/Soundspace/Zero layers
+Shadow/Height script
+Universal audio vector tree
+High and low collision shapes
+Enemy routing
+Compose states/status etc.
+
+PLAY
+Sniper Elite
+Metal Gear 1 & 2
+Metal Gear Solid
+Top-Down LOZ
+Megaman
+Sanitarium
+IHNMAIMS
+Myst
+Abuse
+Expedition Zero
+(Create graphs)
+
+REVIEW
+Metroidvania maps
+Zelda Retrospective
+Red/blue ability freedom circle graph
+code grouping / abstractions
+Zdzislaw Beksinski
+
+#------------------------------------------------
 # Controls                                      |
 #------------------------------------------------
 MODELS
@@ -152,42 +199,3 @@ Hidden advanced maneuvers + meta-techniques
 Intrinsic/Extrinsic skill paths/valves
 Radio malfunction / radius noise bomb effect (level)
 
-#------------------------------------------------
-# TODO                                          |
-#------------------------------------------------
-CODE
-Texture AudioPlayer2D
-Beam ysort thing
-Shadow/Height script
-Universal audio vector tree
-High and low collision shapes
-Enemy routing
-Compose states/status etc.
-
-PLAY
-Sniper Elite
-Metal Gear 1 & 2
-Metal Gear Solid
-Top-Down LOZ
-Megaman
-Sanitarium
-IHNMAIMS
-Myst
-Abuse
-(Creat graphs)
-
-WATCH:
-VHS tapes
-The Godfather
-Breaking Bad
-Expedition Zero
-
-REVIEW
-Metroidvania maps
-Zelda Retrospective
-Red/blue ability freedom circle graph
-code grouping / abstractions
-Zdzislaw Beksinski
-
-OTHER / CREW:
-Carbon Battle royale

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/big_boi.png-e2a27d76694e2aedb3a1a81bdc0d5761.stex"
+path="res://.import/big_boi.png-221f20f2acc23fa92febeca41a803a8d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://testing/ground2/big_boi.png"
-dest_files=[ "res://.import/big_boi.png-e2a27d76694e2aedb3a1a81bdc0d5761.stex" ]
+source_file="res://testing/ground2/Textures/big_boi.png"
+dest_files=[ "res://.import/big_boi.png-221f20f2acc23fa92febeca41a803a8d.stex" ]
 
 [params]
 
@@ -28,6 +28,7 @@ process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false
+process/normal_map_invert_y=false
 stream=false
 size_limit=0
 detect_3d=false

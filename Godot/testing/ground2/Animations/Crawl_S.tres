@@ -4,7 +4,7 @@
 
 [resource]
 resource_name = "Crawl S"
-length = 0.416667
+length = 0.400001
 loop = true
 step = 0.0166667
 tracks/0/type = "value"
