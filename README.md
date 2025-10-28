@@ -1,1 +1,2 @@
-# SniperGame
+# GDProject
+(Deprecated)
